@@ -23,15 +23,6 @@ voices = engine.getProperty('voices')
 # print(voices[3].id)
 engine.setProperty('voice', voices[3].id)
 
-INTRO = '''
-        |=================JARVIS=================|
-        |=================MADE BY SHAURYA===============|
-        |=================INSPIRED BY IRON MAN (TONY STARK) JARVIS======================|
-        |=================A VIRTUAL ASSISTANT MADE IN PYTHON===============
-        |=================LET'S GO!================|
-        '''
-
-print(INTRO)        
 def speak(audio):
     engine.say(audio)
     print(f"JARVIS: {audio}")
