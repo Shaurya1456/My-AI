@@ -82,29 +82,18 @@ if __name__ == '__main__':
             webbrowser.open("https://www.stackoverflow.com")
             
         elif 'who are you' in query:
-            who_are_you_msg = ['I am Friday', 'My name Friday']
+            who_are_you_msg = ['I am Friday', 'My name is Friday']
             speak(random.choice(who_are_you_msg))
 
         elif 'play music' in query or 'hit some music' in query:
             music_msg = ['Ok, Hitting Some Music', 'Ok']
+            speak(random.choice(music_msg)
             music_dir = 'your music directory'
+            songs = os.listdir(music_dir)
+            random_music = random.choice(songs)
+            os.startfile(os.path.join(music_dir, random_music))
             
         elif 'repeat me' in query:
             speak("Alright!")
             repeat = takeCommand()
-            speak(repeat)
-
-
-
-
-
-            
-            
-            
-            
-
-            
-                
-
-
-
+            speak(repeat)     
