@@ -87,7 +87,7 @@ if __name__ == '__main__':
 
         elif 'play music' in query or 'hit some music' in query:
             music_msg = ['Ok, Hitting Some Music', 'Ok']
-            music_dir = 'music(songs)\\noncritical\\favroitesongs2'
+            music_dir = 'your music directory'
             
         elif 'repeat me' in query:
             speak("Alright!")
