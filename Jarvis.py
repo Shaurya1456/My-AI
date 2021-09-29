@@ -71,11 +71,11 @@ def takeCommand():
     return query
 
 def sendEmail(myemail,content):
-    server = smtplib.SMTP("shaurya.krishnadpsv@gmail.com", 587)
+    server = smtplib.SMTP("Your Email ID", 587)
     server.ehlo()
     server.starttls()
-    server.login("shaurya.krishnadpsv@gmail.com", "shauryaswaraa@1")
-    server.sendmail("shaurya.krishnadpsv@gmail.com", to,content)
+    server.login("Your Email ID", "Your password")
+    server.sendmail("Your Email ID", to,content)
     server.close()
 
 def cpu_battery_usage():
