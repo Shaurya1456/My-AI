@@ -10,12 +10,13 @@ import pyautogui
 import wolframalpha
 import random
 import psutil
-import sys
+import sys     
 import pyjokes as pyj
 import pyautogui as pya
 import time
 import wmi
 from translate import Translator
+import screen_brightness_control as sbc
 
 
 engine = pyttsx3.init('sapi5')
@@ -319,11 +320,14 @@ if __name__ == "__main__":
             speak("Entering Full Screen Mode")
             pya.hotkey('f')
 
-        elif 'monitor brightness to' in query:
-            brightness = query.replace('monitor brightness to', '')
-            c = wmi.WMI(namespace='wmi')
-            methods = c.WmiMonitorBrightnessMethod()[0]
-            methods.WmiSetBrightnesss(brightness, 0)
+        elif 'change monitor brightness' in query:
+            speak("To What Brightness Sir?")
+            Brightness = takeCommand()
+            speak("Ok Sir")
+            monitors = sbc.list_monitors()
+            # print(monitors)
+            # now use this to adjust specific screens by name
+            sbc.set_brightness(Brightness, display=monitors[0])
 
         elif 'translate to' in query:
             lang = query.replace('translate to', '')
