@@ -353,7 +353,7 @@ if __name__ == "__main__":
             while True:
                 if time.localtime().tm_hour == hour and time.localtime().tm_min == minn and time.localtime().tm_sec == sec:
                  print("Wake Up Sir!!!")
-                 playsound("C:\\Alarms\\Jarvis Alarm 2.mp3")  
+                 playsound("Alarm File Location")  
 
         elif 'show me' in query:
             pic = query.replace('show me', '')
@@ -361,3 +361,4 @@ if __name__ == "__main__":
             speak("Sure Sir!")
             speak(f"Searching Pictures Of {pic}") 
             wb.open_new_tab(pictures)
+
